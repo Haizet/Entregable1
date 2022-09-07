@@ -1,0 +1,14 @@
+{% extends 'Entrega1MV/buscar_post.html' %}
+{% block title %}
+<h1 class="mb-5">Posteos encontrados</h1>
+{% endblock  %}
+
+{% block  muestra %}
+<div class="row">
+    <div class="col">
+        {% for p in post  %}
+        <p> {{p.titulo}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}

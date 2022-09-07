@@ -1,0 +1,15 @@
+{% extends 'Entrega1MV/buscar_tema.html' %}
+
+
+{% block title %}
+<h1 class="mb-5">Buscar Tema</h1>
+{% endblock  %}
+
+{% block  busqueda %}
+<div class="row">
+    <div class="col">
+        {{form.as_p}}
+    </div>
+    <input type="submit" value="Buscar">
+</div>
+{% endblock  %}

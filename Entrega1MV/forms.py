@@ -13,6 +13,12 @@ class PosteoFormulario(forms.Form):
     titulo = forms.CharField(max_length=200)
     fecha_creacion = forms.DateField()
 
+class BusquedaPosteoFormulario(forms.Form):
+    titulo = forms.CharField(max_length=200)
+
     
 class SubjectFormulario(forms.Form):
+    nombre = forms.CharField(max_length=40)
+
+class BusquedaSubjectFormulario(forms.Form):
     nombre = forms.CharField(max_length=40)

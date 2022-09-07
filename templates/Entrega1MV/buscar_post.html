@@ -31,7 +31,7 @@
                         <div class="text-center text-white">
                             <!-- Page heading-->
                             {% block title %}
-
+                            
                             {% endblock  %}
                             
                             <!-- Signup form-->
@@ -43,7 +43,7 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN" action = "/Entrega1MV/busqueda_usuario_get" method = "GET"> {% csrf_token %}
+                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN" action = "/Entrega1MV/busqueda_post_get" method = "GET"> {% csrf_token %}
                                 {% block busqueda %}
                                 {% endblock  %}
                                 {% block muestra %}

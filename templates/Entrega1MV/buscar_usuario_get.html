@@ -1,0 +1,14 @@
+{% extends 'Entrega1MV/buscar_usuario.html' %}
+{% block title %}
+<h1 class="mb-5">Buscar Usuario</h1>
+{% endblock  %}
+
+{% block  muestra %}
+<div class="row">
+    <div class="col">
+        {% for u in user  %}
+        <p>El nombre del usuario es {{u.nombre}} {{u.apellido}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}

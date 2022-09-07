@@ -1,0 +1,14 @@
+{% extends 'Entrega1MV/buscar_tema.html' %}
+{% block title %}
+<h1 class="mb-5">El tema Encontrado fue</h1>
+{% endblock  %}
+
+{% block  muestra %}
+<div class="row">
+    <div class="col">
+        {% for t in subject  %}
+        <p>{{t.nombre}} </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}

@@ -1,1 +1,6 @@
-Prueba
+Instructivo de uso
+
+La url para probar es http://127.0.0.1:8000/Entrega1MV/
+-Esto abre el inicio de la aplicacion.
+-En la barra superior se encuentran 6 opciones. 3 opciones crean (usarios, temas y posts) y las otras 3 buscan en base a sus respectivos nombres
+-Todas estas pantallas, tienen la opcion de volver atras haciendo click en el boton de inicio en la barra superior.

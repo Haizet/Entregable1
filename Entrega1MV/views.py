@@ -30,6 +30,20 @@ def user_info(request):
     users = Usuario.objects.all()
     return render(request, 'Entrega1MV/user_info.html', {"users" : users})
 
+def busqueda_usuario(request):
+
+    info = {'form':BusquedaUsuarioFormulario()}
+
+    return render(request, 'Entrega1MV/buscar_usuario_post.html',info)
+
+def busqueda_usuario_get(request):
+
+    nombre = request.GET.get('nombre')
+
+    user = Usuario.objects.filter(nombre__icontains=nombre)
+    return render(request, 'Entrega1MV/buscar_usuario_get.html',{'user':user})
+
+
 def topics(request):
     return render(request, 'Entrega1MV/index.html')
 
@@ -46,6 +60,20 @@ def create_topics(request):
     else:
         subjectform = SubjectFormulario()
     return render(request, 'Entrega1MV/topicCreate.html',{'subjectform':subjectform})
+
+def busqueda_tema(request):
+
+    info = {'form':BusquedaSubjectFormulario()}
+
+    return render(request, 'Entrega1MV/buscar_tema_post.html',info)
+
+def busqueda_tema_get(request):
+
+    nombre = request.GET.get('nombre')
+
+    subject = Subject.objects.filter(nombre__icontains=nombre)
+    return render(request, 'Entrega1MV/buscar_tema_get.html',{'subject':subject})
+
 
 def posts(request):
     return render(request, 'Entrega1MV/index.html')
@@ -66,8 +94,15 @@ def create_posts(request):
         post_form = PosteoFormulario()
     return render(request, 'Entrega1MV/postCreate.html',{'post_form':post_form})
 
-def busqueda_usuario(request):
+def busqueda_post(request):
 
-    info = {'form':BusquedaUsuarioFormulario()}
+    info = {'form':BusquedaPosteoFormulario()}
 
-    return render(request, 'Entrega1MV/buscar_usuario.html',info)
+    return render(request, 'Entrega1MV/buscar_post_post.html',info)
+
+def busqueda_post_get(request):
+
+    titulo = request.GET.get('titulo')
+
+    post = Posteo.objects.filter(titulo__icontains=titulo)
+    return render(request, 'Entrega1MV/buscar_post_get.html',{'post':post})
