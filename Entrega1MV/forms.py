@@ -22,3 +22,4 @@ class SubjectFormulario(forms.Form):
 
 class BusquedaSubjectFormulario(forms.Form):
     nombre = forms.CharField(max_length=40)
+
